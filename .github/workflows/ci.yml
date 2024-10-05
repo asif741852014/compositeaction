@@ -5,8 +5,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v4
-    - name: using
-      uses: ./
+    - name: compositeaction
+      uses: asif741852014/compositeaction@v1.0.0
+            
     
