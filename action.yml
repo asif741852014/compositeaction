@@ -9,7 +9,7 @@ runs:
   steps:
     - name: step1
       id: id1
-      run: echo "var1=hello" >> $GITHUB_OUTPUT  # Ensure this is correct
+      run: echo "var1=hello123" >> $GITHUB_OUTPUT  # Ensure this is correct
       shell: bash
     - name: step2
       run: echo "step2"

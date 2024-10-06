@@ -4,6 +4,8 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    outputs:
+      otput1: ${{ steps.uu.outputs.otput1 }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
