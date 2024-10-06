@@ -5,9 +5,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - name: compositeaction
-      id: uu
-      uses: asif741852014/compositeaction@v1.0.0
-    - run: echo "hai ${{ steps.uu.outputs.output1 }}"
-            
-    
+      - name: compositeaction
+        id: uu
+        uses: asif741852014/compositeaction@v1.0.0
+      - run: echo "hai ${{ steps.uu.outputs.output1 }}"  # This will output 'hai hello'
