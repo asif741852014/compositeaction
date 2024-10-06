@@ -3,14 +3,14 @@ description: hai from composite
 outputs:
   output1:
     description: "hai bro"
-    value: ${{ steps.id1.outputs.var1 }}
+    value: ${{ steps.id1.outputs.var1 }}  # This correctly references the output variable
 runs:
   using: "composite"
   steps:
-  - name: step1
-    id: id1
-    run: echo "var1=hello" >> $GITHUB_OUTPUT
-    shell: bash
-  - name: step2
-    run: echo "step2"
-    shell: bash
+    - name: step1
+      id: id1
+      run: echo "var1=hello" >> $GITHUB_OUTPUT  # Ensure this is correct
+      shell: bash
+    - name: step2
+      run: echo "step2"
+      shell: bash
