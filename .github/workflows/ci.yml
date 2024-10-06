@@ -12,6 +12,8 @@ jobs:
       - name: compositeaction
         id: uu
         uses: ./
+        with:
+          in1: "asif"
       - run: echo "hai ${{ steps.uu.outputs.output1 }}"  # This will output 'hai hello'
   job2:
     runs-on: ubuntu-latest

@@ -1,5 +1,10 @@
 name: compositeaction
 description: hai from composite
+inputs:
+  in1:
+    description: in1
+    type: string
+    required: true
 outputs:
   output1:
     description: "hai bro"
@@ -12,5 +17,5 @@ runs:
       run: echo "var1=hello123" >> $GITHUB_OUTPUT  # Ensure this is correct
       shell: bash
     - name: step2
-      run: echo "step2"
+      run: echo "step2 using in1 as ${{ inputs.in1 }}"
       shell: bash
