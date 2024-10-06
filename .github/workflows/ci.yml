@@ -15,5 +15,6 @@ jobs:
       - run: echo "hai ${{ steps.uu.outputs.output1 }}"  # This will output 'hai hello'
   job2:
     runs-on: ubuntu-latest
+    needs: job1
     steps:
     - run: echo "hai ${{ needs.job1.outputs.otput1 }}"
