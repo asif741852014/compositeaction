@@ -1,10 +1,15 @@
 name: compositeaction
 description: hai from composite
+outputs:
+  output1:
+    description: "hai bro"
+    value: ${{ steps.id1.outputs.var1 }}
 runs:
   using: "composite"
   steps:
   - name: step1
-    run: echo "step1"
+    id: id1
+    run: echo "var1=hello" >> $GITHUB_OUTPUT
     shell: bash
   - name: step2
     run: echo "step2"
