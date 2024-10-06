@@ -13,3 +13,7 @@ jobs:
         id: uu
         uses: ./
       - run: echo "hai ${{ steps.uu.outputs.output1 }}"  # This will output 'hai hello'
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "hai ${{ needs.job1.outputs.output1 }}"
